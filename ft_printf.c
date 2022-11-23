@@ -6,7 +6,7 @@
 /*   By: kzerri <kzerri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:41:22 by kzerri            #+#    #+#             */
-/*   Updated: 2022/11/24 00:15:49 by kzerri           ###   ########.fr       */
+/*   Updated: 2022/11/24 00:24:21 by kzerri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,3 @@ int	ft_printf(const char *str, ...)
 	}
 	return (printed);
 }
-
-// int main()
-// <%
-// 	printf("%d\n",ft_printf("%s","😎"));
-// 	// printf("%d\n",printf("%#x ", 0));
-// 	//printf("%s", NULL);
-// 	//printf("%015-5d %u\n",251512 ,12);
-// 	//printf("sizw = %d", printf("%p", s));
-// 	// ft_printf("sizw = %d\n", ft_printf("%p\n", p));
-// 	// printf("sizw = %d\n", printf("%p\n", p) );
-// %>
