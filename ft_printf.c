@@ -6,7 +6,7 @@
 /*   By: kzerri <kzerri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:41:22 by kzerri            #+#    #+#             */
-/*   Updated: 2022/11/24 00:24:21 by kzerri           ###   ########.fr       */
+/*   Updated: 2022/11/24 02:11:33 by kzerri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,10 @@ int	print_flags(const char fl, const char fs, va_list arg)
 	{
 		nbr = va_arg(arg, unsigned int);
 		if (fs == 'x')
-			return ((2 * (nbr && ft_strchr("xX", fs))) + ft_putnbr_base(nbr, HEX_LOW, fs));
-		return ((2 * (nbr && ft_strchr("xX", fs))) + ft_putnbr_base(nbr, HEX_UPP, fs));
+			return ((2 * (nbr && ft_putstr("0x")))
+				+ ft_putnbr_base(nbr, HEX_LOW, fs));
+		return ((2 * (nbr && ft_putstr("0X")))
+			+ ft_putnbr_base(nbr, HEX_UPP, fs));
 	}
 	if (ft_strchr("id", fs) && ft_strchr(" +", fl))
 	{
